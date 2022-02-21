@@ -200,9 +200,25 @@ int CPUsquare_p(unsigned int count, float * data, float * results) {
 
 int time_GPU_CPU(unsigned int count) {
   float * data = malloc(sizeof(float) * count);
+  if (!data){
+    printf("malloc failed!\n");
+    return 1;
+  }
   float * GPUresults = malloc(sizeof(float) * count);
+  if (!GPUresults){
+    printf("malloc failed!\n");
+    return 1;
+  }
   float * CPUresults = malloc(sizeof(float) * count);
+  if (!CPUresults){
+    printf("malloc failed!\n");
+    return 1;
+  }
   float * CPUresults_p = malloc(sizeof(float) * count);
+  if (!CPUresults_p){
+    printf("malloc failed!\n");
+    return 1;
+  }
   int err;
   struct timeval tv1, tv2;
 
