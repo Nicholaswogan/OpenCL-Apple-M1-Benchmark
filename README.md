@@ -5,11 +5,12 @@
 - Multithreaded CPU using OpenMP
 - Serial CPU
 
-Results for Apple M1 for squaring 102,400,000 single precision floats:
+Results for Apple M1 (Macbook Air 16 GB RAM) for squaring 102,400,000 single precision floats:
 |            | Time (milliseconds) | Time Relative to GPU |
 | ---------- | ------------------- | -------------------- |
 | GPU        | 0.335079            | 1x                   |
 | OpenMP CPU | 31.831000           | 90x                  |
 | Serial CPU | 38.473000           | 120x                 |
+
 
 
